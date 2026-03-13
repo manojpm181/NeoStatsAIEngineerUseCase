@@ -3,20 +3,18 @@ from models.embeddings import get_embedding_model
 
 
 def create_vector_store(documents):
-
     embeddings = get_embedding_model()
 
-    vectorstore = FAISS.from_documents(
+    vector_store = FAISS.from_documents(
         documents,
         embeddings
     )
 
-    return vectorstore
+    return vector_store
 
 
-def retrieve_documents(vectorstore, query):
-
-    docs = vectorstore.similarity_search(
+def retrieve_documents(vector_store, query):
+    docs = vector_store.similarity_search(
         query,
         k=3
     )
