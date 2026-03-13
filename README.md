@@ -67,25 +67,25 @@ The application follows a **modular architecture** inspired by production AI sys
                               │
                               ▼
                    ┌────────────────────┐
-                   │   Query Processing  │
+                   │   Query Processing     │
                    └─────────┬──────────┘
                              │
                ┌─────────────┴─────────────┐
                │                           │
                ▼                           ▼
       ┌───────────────┐           ┌────────────────┐
-      │   Vector DB    │           │  Web Search     │
-      │   (FAISS)      │           │   (SerpAPI)     │
+      │   Vector DB      │           │  Web Search        │
+      │   (FAISS)        │           │   (SerpAPI)        │
       └───────┬────────┘           └────────┬───────┘
               │                              │
               └──────────────┬───────────────┘
                              ▼
                     ┌─────────────────┐
-                    │  Prompt Builder  │
+                    │  Prompt Builder    │
                     └─────────┬───────┘
                               ▼
                      ┌────────────────┐
-                     │   LLM (Groq)    │
+                     │   LLM (Groq)      │
                      └─────────┬──────┘
                                ▼
                         Generated Answer
@@ -154,11 +154,11 @@ Main application entry point.
 
 Responsibilities:
 
-• Streamlit UI
-• Chat interaction
-• PDF upload handling
-• Query routing
-• LLM response display
+- Streamlit UI
+- Chat interaction
+- PDF upload handling
+- Query routing
+- LLM response display
 
 ---
 
@@ -168,8 +168,8 @@ Handles LLM initialization.
 
 Responsible for:
 
-• Loading Groq models
-• Configuring inference parameters
+- Loading Groq models
+- Configuring inference parameters
 
 ---
 
@@ -193,10 +193,10 @@ Responsible for RAG operations.
 
 Functions include:
 
-• Text chunking
-• Embedding generation
-• FAISS vector database creation
-• Similarity search
+- Text chunking
+- Embedding generation
+- FAISS vector database creation
+- Similarity search
 
 ---
 
@@ -219,10 +219,9 @@ Returns search results used as fallback context.
 Builds structured prompts for the LLM.
 
 Prompt includes:
-
-• Retrieved context
-• User query
-• Response style (Concise/Detailed)
+- Retrieved context
+- User query
+- Response style (Concise/Detailed)
 
 ---
 
@@ -331,17 +330,17 @@ What is the latest version of Python?
 
 # Performance Considerations
 
-• FAISS enables **fast semantic search** even with large document collections.
-• Groq inference provides **low-latency LLM responses**.
-• RAG reduces hallucination by grounding answers in documents.
+- FAISS enables **fast semantic search** even with large document collections.
+- Groq inference provides **low-latency LLM responses**.
+- RAG reduces hallucination by grounding answers in documents.
 
 ---
 
 # Security Considerations
 
-• API keys stored in `.env`
-• No document data is permanently stored
-• Temporary files are overwritten
+- API keys stored in `.env`
+- No document data is permanently stored
+- Temporary files are overwritten
 
 ---
 
@@ -349,12 +348,12 @@ What is the latest version of Python?
 
 Potential enhancements:
 
-• Multi-document knowledge base
-• Source citation display
-• Streaming responses
-• Memory-based conversations
-• Vector database persistence
-• Authentication system
+- Multi-document knowledge base
+- Source citation display
+- Streaming responses
+- Memory-based conversations
+- Vector database persistence
+- Authentication system
 
 ---
 
@@ -362,11 +361,11 @@ Potential enhancements:
 
 This architecture is commonly used in:
 
-• Enterprise knowledge assistants
-• Customer support automation
-• Research assistants
-• Legal document analysis
-• Internal company documentation search
+- Enterprise knowledge assistants
+- Customer support automation
+- Research assistants
+- Legal document analysis
+- Internal company documentation search
 
 ---
 
