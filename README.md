@@ -245,7 +245,7 @@ Prompt includes:
 Clone the repository:
 
 ```
-git clone https://github.com/yourusername/ai-knowledge-assistant.git
+git clone https://github.com/manojpm181/ai-knowledge-assistant.git
 ```
 
 Navigate into the project:
@@ -286,7 +286,7 @@ Open the application:
 ```
 http://localhost:8501
 ```
-
+https://manojpm181-neostatsaiengineerusecase-app-r4lqsm.streamlit.app/
 ---
 
 # Usage
