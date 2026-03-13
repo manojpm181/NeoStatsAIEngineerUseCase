@@ -4,13 +4,12 @@ from config.config import GROQ_API_KEY, GROQ_MODEL
 
 def get_chatgroq_model():
     try:
-        model = ChatGroq(
-            api_key=GROQ_API_KEY,
-            model=GROQ_MODEL,
+        chat = ChatGroq(
+            groq_api_key=GROQ_API_KEY,
+            model_name=GROQ_MODEL,
             temperature=0.2
         )
-
-        return model
+        return chat
 
     except Exception as e:
         raise RuntimeError(f"Groq model error: {str(e)}")
