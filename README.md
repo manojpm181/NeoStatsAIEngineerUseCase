@@ -10,11 +10,11 @@ AI Knowledge Assistant is an intelligent question-answering system that combines
 
 The system allows users to:
 
-• Upload PDF documents
-• Ask natural language questions
-• Retrieve knowledge from uploaded documents
-• Fall back to web search when information is unavailable
-• Generate concise or detailed responses using an LLM
+- Upload PDF documents
+- Ask natural language questions
+- Retrieve knowledge from uploaded documents
+- Fall back to web search when information is unavailable
+- Generate concise or detailed responses using an LLM
 
 This architecture mimics **modern production AI assistants used by companies such as OpenAI, Perplexity, and Google Gemini.**
 
