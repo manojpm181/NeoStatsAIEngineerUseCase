@@ -7,7 +7,7 @@ def get_chatgroq_model():
         chat = ChatGroq(
             groq_api_key=GROQ_API_KEY,
             model_name=GROQ_MODEL,
-            temperature=0.2
+            temperature=0.3
         )
         return chat
 
