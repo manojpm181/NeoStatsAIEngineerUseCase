@@ -1,19 +1,22 @@
-from langchain_community.utilities import SerpAPIWrapper
-from config.config import SERP_API_KEY
+from serpapi import GoogleSearch
+from config.config import SERPAPI_API_KEY
 
 
 def search_web(query):
 
-    try:
+    params = {
+        "engine": "google",
+        "q": query,
+        "api_key": SERPAPI_API_KEY
+    }
 
-        search = SerpAPIWrapper(
-            serpapi_api_key=SERP_API_KEY
-        )
+    search = GoogleSearch(params)
+    results = search.get_dict()
 
-        result = search.run(query)
+    snippets = []
 
-        return result
+    if "organic_results" in results:
+        for result in results["organic_results"][:3]:
+            snippets.append(result.get("snippet", ""))
 
-    except Exception as e:
-
-        return f"Web search error: {str(e)}"
+    return "\n".join(snippets)
