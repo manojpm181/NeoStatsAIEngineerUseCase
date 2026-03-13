@@ -114,7 +114,7 @@ if prompt:
                 mode
             )
 
-            response = chat_model.invoke(final_prompt)
+            response = chat_model.invoke([{"role": "user", "content": final_prompt}])
 
             answer = response.content
 
